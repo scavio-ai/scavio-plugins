@@ -1,0 +1,27 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "scavio-plugins",
+  "description": "Official Scavio plugins for Claude Code. Structured web data across 32 platforms from one API key.",
+  "owner": {
+    "name": "Scavio",
+    "url": "https://scavio.dev"
+  },
+  "plugins": [
+    {
+      "name": "scavio",
+      "source": "./plugins/scavio",
+      "description": "Structured web data API for Claude Code: web search, page extraction, and structured commerce, social, travel, jobs, real-estate, app-store, ad-library and company-filing data across 32 platforms with one API key.",
+      "category": "development",
+      "keywords": [
+        "web scraping",
+        "search api",
+        "serp",
+        "structured data",
+        "web data",
+        "youtube",
+        "tiktok",
+        "amazon"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "scavio": {
+      "type": "http",
+      "url": "https://mcp.scavio.dev/mcp",
+      "headers": {
+        "x-api-key": "${SCAVIO_API_KEY}",
+        "x-scavio-platforms": "${SCAVIO_PLATFORMS:-default}"
+      }
+    }
+  }
+}
