@@ -1,8 +1,15 @@
-# Scavio for Claude Code
+# Scavio
 
-Web search, page extraction, and structured data from e-commerce, social, retail, jobs and company-filing sources, available to Claude Code as MCP tools with skills that tell it when to use them.
+Web search, page extraction, and structured data from e-commerce, social, retail, jobs and company-filing sources, available to your coding agent as MCP tools with skills that tell it when to use them.
 
 Get an API key at [scavio.dev](https://scavio.dev).
+
+This directory ships two manifests over one set of components:
+
+- `.claude-plugin/plugin.json` + `.mcp.json` — Claude Code, using the hosted MCP server at `https://mcp.scavio.dev/mcp`
+- `plugin.json` + `mcp.json` — [Agent Plugins 1.0.0](https://agent-plugins.org), which Cursor, VS Code, GitHub Copilot, ChatGPT and Codex, Kiro and others load, running `@scavio/mcp-server` over stdio
+
+The `skills/` folder is shared by both. `commands/` is Claude Code only and other clients ignore it. See the [repo README](../../README.md) for install instructions per client.
 
 ---
 

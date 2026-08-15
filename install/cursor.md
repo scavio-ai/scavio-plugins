@@ -4,9 +4,29 @@ Scavio's hosted MCP server gives Cursor's agent web search, page extraction, and
 
 Get an API key at [scavio.dev](https://scavio.dev).
 
+There are two ways in. The **MCP server** below connects Cursor to the hosted endpoint and gives it the tools. The **Agent Plugin** additionally gives it the twelve Scavio skills, which tell the agent which tool to reach for. If you want both, install the plugin.
+
 ---
 
-## One-click install
+## As an Agent Plugin (tools plus skills)
+
+Cursor supports the [Agent Plugins](https://agent-plugins.org) standard, and `plugins/scavio/` in this repo is a conformant package.
+
+```bash
+git clone https://github.com/scavio-ai/scavio-plugins.git
+ln -s "$PWD/scavio-plugins/plugins/scavio" ~/.cursor/plugins/local/scavio
+export SCAVIO_API_KEY=your_key_here
+```
+
+Restart Cursor, or run **Developer: Reload Window**. Open **Customize** in the sidebar to confirm the skills and the `scavio` MCP server are listed.
+
+This path runs `npx -y @scavio/mcp-server` over stdio and reads the key from your environment, because the Agent Plugins specification forbids credentials in `mcp.json` headers. For the hosted server with an `x-api-key` header, use the MCP install below instead.
+
+---
+
+## As an MCP server (tools only)
+
+### One-click install
 
 [![Add scavio MCP server to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=scavio&config=eyJ1cmwiOiJodHRwczovL21jcC5zY2F2aW8uZGV2L21jcCIsImhlYWRlcnMiOnsieC1hcGkta2V5IjoiWU9VUl9TQ0FWSU9fQVBJX0tFWSJ9fQ%3D%3D)
 

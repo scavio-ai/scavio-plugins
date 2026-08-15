@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "scavio",
   "description": "Structured web data API for Claude Code: web search, page extraction, and structured commerce, social, travel, jobs, real-estate, app-store, ad-library and company-filing data across 32 platforms with one API key.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Scavio",
     "url": "https://scavio.dev"

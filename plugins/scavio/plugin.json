@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "scavio",
+  "version": "0.2.0",
+  "description": "Structured web data for AI agents: web search, page extraction, and structured commerce, social, travel, jobs, real-estate, app-store, ad-library and company-filing data across 32 platforms with one API key.",
+  "author": {
+    "name": "Scavio",
+    "url": "https://scavio.dev"
+  },
+  "homepage": "https://scavio.dev/docs",
+  "repository": "https://github.com/scavio-ai/scavio-plugins",
+  "license": "MIT",
+  "keywords": [
+    "web scraping",
+    "search api",
+    "structured data",
+    "web data",
+    "serp",
+    "youtube",
+    "tiktok",
+    "amazon"
+  ]
+}

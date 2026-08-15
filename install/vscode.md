@@ -4,6 +4,8 @@ Scavio's hosted MCP server gives VS Code agent mode web search, page extraction,
 
 Get an API key at [scavio.dev](https://scavio.dev).
 
+VS Code also implements the [Agent Plugins](https://agent-plugins.org) standard, and `plugins/scavio/` in this repo is a conformant package carrying the twelve Scavio skills alongside the MCP server. Installing it gives the agent guidance on which tool to pick, not just the tools; see the [Agent Plugins section of the README](../README.md#agent-plugins) and VS Code's own documentation for where it reads plugins from. The MCP-only install below is the lighter option and is what the buttons do.
+
 ---
 
 ## One-click install

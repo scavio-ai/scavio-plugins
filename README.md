@@ -10,9 +10,34 @@ All three targets talk to the same hosted MCP server at `https://mcp.scavio.dev/
 
 | Path | What it is |
 | --- | --- |
-| `plugins/scavio/` | The Claude Code plugin: skills, commands, and the MCP server config |
+| `plugins/scavio/` | The plugin itself: skills, commands, and MCP config. Ships both a Claude Code manifest and an [Agent Plugins](https://agent-plugins.org) manifest, so it loads in either |
 | `install/cursor.md` | Cursor install guide (deeplink and manual config) |
 | `install/vscode.md` | VS Code install guide (deeplink and `mcp.json`) |
+
+---
+
+## Agent Plugins
+
+`plugins/scavio/` is a conformant [Agent Plugins 1.0.0](https://agent-plugins.org) package: a root `plugin.json`, the same twelve `skills/`, and an `mcp.json` declaring the Scavio MCP server over stdio. Any client that implements the standard loads it without changes, which today means **Cursor, VS Code, GitHub Copilot, ChatGPT and Codex, Kiro, OpenClaw, Hermes Agent, Grok Bot and NanoClaw**.
+
+Clone the repo and point your client at `plugins/scavio`. In Cursor, that means symlinking it into the local plugin directory:
+
+```bash
+git clone https://github.com/scavio-ai/scavio-plugins.git
+ln -s "$PWD/scavio-plugins/plugins/scavio" ~/.cursor/plugins/local/scavio
+```
+
+Then restart the client. Consult your client's own documentation for where it reads local plugins from.
+
+The `mcp.json` runs `npx -y @scavio/mcp-server` over stdio and reads `SCAVIO_API_KEY` from your environment. That is deliberate: the Agent Plugins specification requires headers to be literal package data and forbids putting credentials in them, and 1.0.0 defines no portable credential mechanism, so a remote server with an `x-api-key` header cannot be expressed in the standard. Export the key before starting your client:
+
+```bash
+export SCAVIO_API_KEY=your_key_here
+```
+
+`SCAVIO_PLATFORMS` is read the same way if you want a different tool set.
+
+If you would rather use the hosted server than run one over stdio, skip the plugin and use the per-client MCP config below, which does support the `x-api-key` header.
 
 ---
 
