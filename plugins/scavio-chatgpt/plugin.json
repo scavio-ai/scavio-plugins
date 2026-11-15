@@ -1,0 +1,103 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "scavio",
+  "version": "1.0.0",
+  "description": "Live web data for ChatGPT and Codex: Google search, news, shopping and Maps results, published company contact details, and the content of any public web page or site.",
+  "author": {
+    "name": "Scavio LLC",
+    "email": "support@scavio.dev",
+    "url": "https://scavio.dev"
+  },
+  "homepage": "https://scavio.dev",
+  "repository": "https://github.com/scavio-ai/scavio-plugins",
+  "license": "MIT",
+  "keywords": ["web search", "google", "news", "google maps", "web pages", "company contacts", "research"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Scavio",
+        "shortDescription": "Live web and Google data",
+        "longDescription": "Scavio brings live web data into ChatGPT and Codex.\n\nWhat you can do:\n- Search Google and get the results page as structured data, including the AI Overview, related questions and local results.\n- Find recent news on any topic from Google News.\n- Compare product prices across stores with Google Shopping.\n- Find businesses and places on Google Maps, with ratings, hours, phone numbers and reviews.\n- Look up a company's published emails, phone numbers and social profiles from its own website.\n- Read any public web page, list the pages of a site, or read many pages at once.\n\nWho it is for: anyone researching a topic, a market, a product or a list of local businesses who needs current information with links to the sources.\n\nHow it works: sign in with your Scavio account when you connect. Requests run on that account.\n\nLimitations: Scavio reads public web content only. It cannot sign in to other websites, read private accounts, or buy anything. Site crawls respect robots.txt, and crawl and batch results stay available for 3 days.",
+        "developerName": "Scavio LLC",
+        "category": "Education & Research",
+        "capabilities": [
+          "Search Google",
+          "Find recent news",
+          "Compare product prices",
+          "Find local businesses and reviews",
+          "Find published company contact details",
+          "Read web pages and sites"
+        ],
+        "websiteURL": "https://scavio.dev",
+        "supportURL": "https://scavio.dev/support",
+        "privacyPolicyURL": "https://scavio.dev/privacy",
+        "termsOfServiceURL": "https://scavio.dev/terms",
+        "defaultPrompt": [
+          "Search Google for recent reviews of the Framework Laptop 13 and summarize them.",
+          "Find five highly rated bakeries in Chicago on Google Maps with their phone numbers.",
+          "Read https://www.python.org/about/ and summarize it in three bullet points."
+        ],
+        "brandColor": "#4F46E5",
+        "brandColorDark": "#818CF8",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Web search with sources",
+              "prompt": "Search Google for the best project management tools for small teams and list the top five results with links.",
+              "tools_triggered": "search_google",
+              "expected_behavior": "Calls search_google once and lists five organic results, each with its title and link, taken from the returned results page."
+            },
+            {
+              "description": "Recent news on a topic",
+              "prompt": "Find recent news about electric vehicle battery recycling and list five articles with their source and date.",
+              "tools_triggered": "google_news",
+              "expected_behavior": "Calls google_news and lists five articles with title, publisher, date and link from the returned results."
+            },
+            {
+              "description": "Local businesses and their reviews",
+              "prompt": "Find highly rated coffee shops in Austin, Texas on Google Maps, list five with rating and address, then show three reviews for the first one.",
+              "tools_triggered": "google_maps_search, google_maps_reviews",
+              "expected_behavior": "Calls google_maps_search, lists five places with rating and address, then calls google_maps_reviews with the first place's place_id and shows three of its reviews."
+            },
+            {
+              "description": "Read a specific web page",
+              "prompt": "Read https://www.python.org/about/ and summarize what it says in three bullet points.",
+              "tools_triggered": "extract_url",
+              "expected_behavior": "Calls extract_url on the given URL and summarizes the page content in three bullet points without adding facts that are not on the page."
+            },
+            {
+              "description": "Published company contact details",
+              "prompt": "What contact email and social profiles does Epoch Coffee publish on its website epochcoffee.com?",
+              "tools_triggered": "company_enrich",
+              "expected_behavior": "Calls company_enrich with the website and reports the email address and social profile links the company publishes, with its contact page link."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Purchases are not supported",
+              "prompt": "Buy the cheapest espresso machine you can find and ship it to me."
+            },
+            {
+              "description": "No access to private accounts",
+              "prompt": "Log in to my Instagram account and read my direct messages."
+            },
+            {
+              "description": "No changes to other websites",
+              "prompt": "Post a five-star review for Epoch Coffee on Google Maps."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Scavio does not sell products or process payments in ChatGPT or Codex. It returns public web data, including product prices, for information only."
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Initial release: Google search, news, shopping and Maps, published company contact details, and web page, site map, crawl and batch reading."
+      }
+    }
+  }
+}
