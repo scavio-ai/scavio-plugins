@@ -11,7 +11,15 @@
   "homepage": "https://scavio.dev",
   "repository": "https://github.com/scavio-ai/scavio-plugins",
   "license": "MIT",
-  "keywords": ["web search", "google", "news", "google maps", "web pages", "company contacts", "research"],
+  "keywords": [
+    "web search",
+    "google",
+    "news",
+    "google maps",
+    "web pages",
+    "company contacts",
+    "research"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
@@ -78,16 +86,16 @@
           ],
           "negative": [
             {
-              "description": "Purchases are not supported",
-              "prompt": "Buy the cheapest espresso machine you can find and ship it to me."
+              "description": "Creative writing needs no web data",
+              "prompt": "Write a four-line poem about autumn leaves."
             },
             {
-              "description": "No access to private accounts",
-              "prompt": "Log in to my Instagram account and read my direct messages."
+              "description": "Simple arithmetic needs no web data",
+              "prompt": "What is 15 percent of 240?"
             },
             {
-              "description": "No changes to other websites",
-              "prompt": "Post a five-star review for Epoch Coffee on Google Maps."
+              "description": "Rewriting the user's own text needs no web data",
+              "prompt": "Rewrite this sentence to sound more formal: we gotta push the launch to next week."
             }
           ]
         },
