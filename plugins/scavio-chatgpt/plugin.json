@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "scavio",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Live web, social media, retailer and real estate data for ChatGPT and Codex: Google Search, News, Shopping, Maps, Flights, Hotels, Trends, Google Play and Ads Transparency; 40 US retailers including Amazon, Walmart, Target, Costco, Home Depot and Best Buy; TikTok, YouTube and Instagram; Zillow, Redfin and Realtor.com; published company contact details; and the content of any public web page or site.",
   "author": {
     "name": "Scavio LLC",
@@ -54,7 +54,7 @@
         "privacyPolicyURL": "https://scavio.dev/privacy",
         "termsOfServiceURL": "https://scavio.dev/terms",
         "defaultPrompt": [
-          "Compare the price of the Ninja AF101 air fryer at Walmart, Target and Amazon.",
+          "Compare air fryer prices at Walmart, Target and Amazon.",
           "Find five highly rated bakeries in Chicago on Google Maps with their phone numbers.",
           "Show three-bedroom homes for sale in Austin, TX under $500,000."
         ],
@@ -80,9 +80,9 @@
             },
             {
               "description": "US retailer prices",
-              "prompt": "Search Walmart for the Ninja AF101 air fryer and tell me the current price and rating of the top result.",
+              "prompt": "Search Walmart for air fryers and list the top three results with price and rating.",
               "tools_triggered": "search_walmart",
-              "expected_behavior": "Calls search_walmart and reports the top result's title, price and rating from the returned data, with its link."
+              "expected_behavior": "Calls search_walmart and lists the top three products with title, price and rating from the returned data, with links."
             },
             {
               "description": "TikTok video search",
