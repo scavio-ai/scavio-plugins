@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "scavio",
-  "version": "1.2.1",
-  "description": "Live web, social media, retailer and real estate data for ChatGPT and Codex: Google Search, News, Shopping, Maps, Flights, Hotels, Trends, Google Play and Ads Transparency; 40 US retailers including Amazon, Walmart, Target, Costco, Home Depot and Best Buy; TikTok, YouTube and Instagram; Zillow, Redfin and Realtor.com; published company contact details; and the content of any public web page or site.",
+  "version": "1.2.2",
+  "description": "Live web, social media, retailer and real estate data: Google Search, News, Shopping, Maps, Flights, Hotels, Trends, Google Play and Ads Transparency; 40 US retailers including Amazon, Walmart, Target, Costco, Home Depot and Best Buy; TikTok, YouTube and Instagram; Zillow, Redfin and Realtor.com; published company contact details; and the content of any public web page or site.",
   "author": {
     "name": "Scavio LLC",
     "email": "hello@scavio.dev",
@@ -37,9 +37,9 @@
       "interface": {
         "displayName": "Scavio",
         "shortDescription": "Web, social, retail & property",
-        "longDescription": "Scavio brings live web, social media, retailer and real estate data into ChatGPT and Codex.\n\nWhat you can do:\n- Google: search Google and get the full results page, including the AI Overview and related questions; ask Google AI Mode; find recent news; compare products and sellers on Google Shopping; find businesses, places and reviews on Google Maps; search Google Flights and Google Hotels; check Google Trends and what is trending now; look up apps on Google Play and ads in the Google Ads Transparency Center.\n- US retailers: search products and read prices, sale and clearance prices, ratings, reviews, sellers, deals and store stock at Amazon, Walmart, Target, Costco, Home Depot, Lowe's, Best Buy, eBay, Kroger, Sam's Club, CVS, Walgreens, Whole Foods Market, H-E-B, Publix, ALDI, Dollar General, Sephora, Ulta Beauty, Macy's, Nordstrom, Nordstrom Rack, Kohl's, JCPenney, Saks Fifth Avenue, Dick's Sporting Goods, Foot Locker, Fanatics, Chewy, PetSmart, Petco, iHerb, Menards, Harbor Freight, Micro Center, Wayfair, Ashley Furniture, TCGplayer, Mercari and Spec's.\n- Social media: look up public TikTok, YouTube and Instagram content, including videos, posts, comments, creators, hashtags, sounds and video transcripts.\n- Real estate: search homes for sale, for rent and recently sold on Zillow, Redfin and Realtor.com, with property details, price and tax history, value estimates, market stats and agents.\n- Look up a company's published emails, phone numbers and social profiles from its own website.\n- Read any public web page, list the pages of a site, or read many pages at once.\n\nWho it is for: anyone researching a topic, a market, a product, a price, a creator, a property or a list of local businesses who needs current information with links to the sources.\n\nHow it works: sign in with your Scavio account when you connect. Requests run on that account.\n\nLimitations: Scavio reads public content only. It cannot sign in to other websites, read private accounts or messages, post, or buy anything. Prices and stock are as shown when you ask. Site crawls respect robots.txt, and crawl and batch results stay available for 3 days.",
+        "longDescription": "Scavio brings live web, social media, retailer and real estate data into your conversations.\n\nWhat you can do:\n- Google: search Google and get the full results page, including related questions and local results; find recent news; compare products and sellers on Google Shopping; find businesses, places and reviews on Google Maps; search Google Flights and Google Hotels; check Google Trends and what is trending now; look up apps on Google Play and ads in the Google Ads Transparency Center.\n- US retailers: search products and read prices, sale and clearance prices, ratings, reviews, sellers, deals and store stock at Amazon, Walmart, Target, Costco, Home Depot, Lowe's, Best Buy, eBay, Kroger, Sam's Club, CVS, Walgreens, Whole Foods Market, H-E-B, Publix, ALDI, Dollar General, Sephora, Ulta Beauty, Macy's, Nordstrom, Nordstrom Rack, Kohl's, JCPenney, Saks Fifth Avenue, Dick's Sporting Goods, Foot Locker, Fanatics, Chewy, PetSmart, Petco, iHerb, Menards, Harbor Freight, Micro Center, Wayfair, Ashley Furniture, TCGplayer, Mercari and Spec's.\n- Social media: look up public TikTok, YouTube and Instagram content, including videos, posts, comments, creators, hashtags, sounds and video transcripts.\n- Real estate: search homes for sale, for rent and recently sold on Zillow, Redfin and Realtor.com, with property details, price and tax history, value estimates, market stats and agents.\n- Look up a company's published emails, phone numbers and social profiles from its own website.\n- Read any public web page, list the pages of a site, or read many pages at once.\n\nWho it is for: anyone researching a topic, a market, a product, a price, a creator, a property or a list of local businesses who needs current information with links to the sources.\n\nHow it works: sign in with your Scavio account when you connect. Requests run on that account.\n\nLimitations: Scavio reads public content only. It cannot sign in to other websites, read private accounts or messages, post, or buy anything. Prices and stock are as shown when you ask. Site crawls respect robots.txt, and crawl and batch results stay available for 3 days.",
         "developerName": "Scavio LLC",
-        "category": "Developer Tools",
+        "category": "Data & Analytics",
         "capabilities": [
           "Search Google, News, Shopping and Maps",
           "Search Google Flights, Hotels and Trends",
@@ -113,11 +113,11 @@
           ]
         },
         "commerce": false,
-        "commerce_description": "Scavio does not sell products or process payments in ChatGPT or Codex. It returns public web data, including product prices, for information only."
+        "commerce_description": "Scavio does not sell products or process payments through this plugin. It returns public web data, including product prices, for information only."
       },
       "publication": {
         "countries": [],
-        "release_notes": "Adds every Google product Scavio covers (AI Mode, Shopping product details, Flights, Hotels, Trends, Google Play, Ads Transparency), 40 US retailers, TikTok, YouTube and Instagram, and Zillow, Redfin and Realtor.com, with a skill for each."
+        "release_notes": "Adds every Google product Scavio covers (Shopping product details, Flights, Hotels, Trends, Google Play, Ads Transparency), 40 US retailers, TikTok, YouTube and Instagram, and Zillow, Redfin and Realtor.com, with a skill for each."
       }
     }
   }
