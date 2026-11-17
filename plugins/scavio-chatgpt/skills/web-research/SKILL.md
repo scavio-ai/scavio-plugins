@@ -23,6 +23,8 @@ Use Scavio's tools to answer with current information from the web, and cite whe
 | A list of known URLs | `batch_extract`, then `get_batch_status` if it returns a job id |
 | How much of their Scavio balance is left | `get_usage` |
 
+For TikTok, Instagram, YouTube, Reddit, X, LinkedIn, Amazon, Walmart, Target, Home Depot, eBay, Best Buy, Zillow, Redfin or Realtor.com, use that platform's skill and tools instead of searching Google for them.
+
 ## Work in this order
 
 1. Run the narrowest tool that answers the question. Do not call tools the question does not need.

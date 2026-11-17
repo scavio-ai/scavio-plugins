@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "scavio",
-  "version": "1.0.0",
-  "description": "Live web data for ChatGPT and Codex: Google search, news, shopping and Maps results, published company contact details, and the content of any public web page or site.",
+  "version": "1.1.0",
+  "description": "Live web, social media, retailer and real estate data for ChatGPT and Codex: Google search, news, shopping and Maps; TikTok, Instagram, YouTube, Reddit, X and LinkedIn; Amazon, Walmart, Target, Home Depot, eBay and Best Buy; Zillow, Redfin and Realtor.com; published company contact details; and the content of any public web page or site.",
   "author": {
     "name": "Scavio LLC",
     "email": "hello@scavio.dev",
@@ -14,7 +14,16 @@
   "keywords": [
     "web search",
     "google",
-    "news",
+    "social media",
+    "tiktok",
+    "instagram",
+    "youtube",
+    "reddit",
+    "amazon",
+    "walmart",
+    "product prices",
+    "real estate",
+    "zillow",
     "google maps",
     "web pages",
     "company contacts",
@@ -24,15 +33,15 @@
     "com.openai": {
       "interface": {
         "displayName": "Scavio",
-        "shortDescription": "Live web and Google data",
-        "longDescription": "Scavio brings live web data into ChatGPT and Codex.\n\nWhat you can do:\n- Search Google and get the results page as structured data, including the AI Overview, related questions and local results.\n- Find recent news on any topic from Google News.\n- Compare product prices across stores with Google Shopping.\n- Find businesses and places on Google Maps, with ratings, hours, phone numbers and reviews.\n- Look up a company's published emails, phone numbers and social profiles from its own website.\n- Read any public web page, list the pages of a site, or read many pages at once.\n\nWho it is for: anyone researching a topic, a market, a product or a list of local businesses who needs current information with links to the sources.\n\nHow it works: sign in with your Scavio account when you connect. Requests run on that account.\n\nLimitations: Scavio reads public web content only. It cannot sign in to other websites, read private accounts, or buy anything. Site crawls respect robots.txt, and crawl and batch results stay available for 3 days.",
+        "shortDescription": "Web, social, retail & property",
+        "longDescription": "Scavio brings live web, social media, retailer and real estate data into ChatGPT and Codex.\n\nWhat you can do:\n- Search Google and get the results page as structured data, including the AI Overview, related questions and local results. Find recent news, compare prices on Google Shopping, and find businesses, places and reviews on Google Maps.\n- Social media: look up public TikTok, Instagram, YouTube, Reddit, X and LinkedIn content, including posts, videos, comments, creators, hashtags, communities, video transcripts and LinkedIn job listings.\n- Retailers: search products and read prices, ratings, reviews, sellers and store stock on Amazon, Walmart, Target, Home Depot, eBay (including sold listings) and Best Buy.\n- Real estate: search homes for sale, for rent and recently sold on Zillow, Redfin and Realtor.com, with property details, price and tax history, value estimates, market stats and agents.\n- Look up a company's published emails, phone numbers and social profiles from its own website.\n- Read any public web page, list the pages of a site, or read many pages at once.\n\nWho it is for: anyone researching a topic, a market, a product, a creator, a property or a list of local businesses who needs current information with links to the sources.\n\nHow it works: sign in with your Scavio account when you connect. Requests run on that account.\n\nLimitations: Scavio reads public content only. It cannot sign in to other websites, read private accounts or messages, post, or buy anything. Site crawls respect robots.txt, and crawl and batch results stay available for 3 days.",
         "developerName": "Scavio LLC",
         "category": "Education & Research",
         "capabilities": [
-          "Search Google",
-          "Find recent news",
-          "Compare product prices",
-          "Find local businesses and reviews",
+          "Search Google, news, shopping and Maps",
+          "Look up public TikTok, Instagram, YouTube, Reddit, X and LinkedIn content",
+          "Compare products, prices and reviews at Amazon, Walmart, Target, Home Depot, eBay and Best Buy",
+          "Search homes, property details and market stats on Zillow, Redfin and Realtor.com",
           "Find published company contact details",
           "Read web pages and sites"
         ],
@@ -41,9 +50,9 @@
         "privacyPolicyURL": "https://scavio.dev/privacy",
         "termsOfServiceURL": "https://scavio.dev/terms",
         "defaultPrompt": [
-          "Search Google for recent reviews of the Framework Laptop 13 and summarize them.",
-          "Find five highly rated bakeries in Chicago on Google Maps with their phone numbers.",
-          "Read https://www.python.org/about/ and summarize it in three bullet points."
+          "Find the top TikTok videos about air fryer recipes this week and summarize what they have in common.",
+          "Compare the price and rating of the Ninja AF101 air fryer on Amazon and Walmart.",
+          "Show three-bedroom homes for sale in Austin, TX under $500,000 on Zillow."
         ],
         "brandColor": "#4F46E5",
         "brandColorDark": "#818CF8",
@@ -82,6 +91,24 @@
               "prompt": "What contact email and social profiles does Epoch Coffee publish on its website epochcoffee.com?",
               "tools_triggered": "company_enrich",
               "expected_behavior": "Calls company_enrich with the website and reports the email address and social profile links the company publishes, with its contact page link."
+            },
+            {
+              "description": "TikTok video search",
+              "prompt": "Search TikTok for videos about sourdough starter tips and list five with the creator and view count.",
+              "tools_triggered": "search_tiktok_videos",
+              "expected_behavior": "Calls search_tiktok_videos and lists five videos with caption, creator and view count from the returned results."
+            },
+            {
+              "description": "Amazon product price",
+              "prompt": "Search Amazon for the Kindle Paperwhite and tell me the current price and rating of the top result.",
+              "tools_triggered": "search_amazon",
+              "expected_behavior": "Calls search_amazon and reports the top result's title, price and rating from the returned data, with its link."
+            },
+            {
+              "description": "Homes for sale",
+              "prompt": "Find three-bedroom homes for sale in Austin, TX under $500,000 on Zillow and list five with price and address.",
+              "tools_triggered": "search_zillow",
+              "expected_behavior": "Calls search_zillow for Austin, TX with the bedroom and price filters and lists five listings with price, address and link from the returned results."
             }
           ],
           "negative": [
@@ -104,7 +131,7 @@
       },
       "publication": {
         "countries": [],
-        "release_notes": "Initial release: Google search, news, shopping and Maps, published company contact details, and web page, site map, crawl and batch reading."
+        "release_notes": "Adds social media, retailer and real estate data: TikTok, Instagram, YouTube, Reddit, X and LinkedIn; Amazon, Walmart, Target, Home Depot, eBay and Best Buy; Zillow, Redfin and Realtor.com, with a skill for each platform."
       }
     }
   }
