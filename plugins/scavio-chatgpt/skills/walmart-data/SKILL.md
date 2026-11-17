@@ -1,6 +1,6 @@
 ---
 name: walmart-data
-description: Answer questions with live Walmart data from Scavio. Use when the user asks about Walmart product search, categories, product details, reviews, sellers and stores.
+description: Answer questions with live Walmart data from Scavio. Use when the user asks about Walmart: keyword search, full product detail by item id, customer reviews with the rating breakdown, category listings, the buy-box offer on an item, marketplace seller storefronts and catalogs, and stores near a US ZIP or Canadian postal code for store-targeted results, as structured JSON.
 ---
 
 # Walmart data with Scavio
@@ -29,8 +29,8 @@ Use Scavio's Walmart tools to answer with current public Walmart data. The user'
 
 ## Write the answer
 
-- Answer from the returned data only. Do not invent products, prices, ratings or stock.
-- Link the Walmart page for each item you mention when the data includes it.
+- Answer from the returned data only. Do not invent products, prices, ratings, stock or store details.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - When nothing matches, say so and suggest a different query.
 - If a tool returns an error, tell the user what failed in plain language. If the account has no credits left, say that the request could not run.

@@ -1,6 +1,6 @@
 ---
-name: realtor-data
-description: Answer questions with live Realtor.com data from Scavio. Use when the user asks about Realtor.com listings for sale, rent and sold, property details, home value estimates, market stats and agents.
+name: realtor-com-data
+description: Answer questions with live Realtor.com data from Scavio. Use when the user asks about Realtor.com: search listings for sale, pending, property type, sold-within days and listing-text keywords, pull one property in full with price and tax history, home value estimates, schools and flood/fire risk, get area market stats, and find agents with every review.
 ---
 
 # Realtor.com data with Scavio
@@ -28,7 +28,7 @@ Use Scavio's Realtor.com tools to answer with current public Realtor.com data. T
 ## Write the answer
 
 - Answer from the returned data only. Do not invent listings, prices, estimates or dates.
-- Link the Realtor.com page for each item you mention when the data includes it.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - When nothing matches, say so and suggest a different query.
 - If a tool returns an error, tell the user what failed in plain language. If the account has no credits left, say that the request could not run.

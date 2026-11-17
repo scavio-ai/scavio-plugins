@@ -1,6 +1,6 @@
 ---
 name: home-depot-data
-description: Answer questions with live Home Depot data from Scavio. Use when the user asks about Home Depot product search, product details and reviews.
+description: Answer questions with live Home Depot data from Scavio. Use when the user asks about Home Depot: keyword search returning price, promotions, brand, model, ratings and per-store pickup and delivery.
 ---
 
 # Home Depot data with Scavio
@@ -19,13 +19,12 @@ Use Scavio's Home Depot tools to answer with current public Home Depot data. The
 
 1. Run the narrowest tool that answers the question. Do not call tools the question does not need.
 2. Search first when the user gives a name or keyword, then pass the id the search returns to the detail tool. Do not guess ids.
-3. Search first, then use the item id for details or reviews.
-4. Page through more results only when the user asks for more than the first page returns.
+3. Page through more results only when the user asks for more than the first page returns.
 
 ## Write the answer
 
-- Answer from the returned data only. Do not invent products, prices, ratings or stock.
-- Link the Home Depot page for each item you mention when the data includes it.
+- Answer from the returned data only. Do not invent products, prices, ratings, stock or store details.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - When nothing matches, say so and suggest a different query.
 - If a tool returns an error, tell the user what failed in plain language. If the account has no credits left, say that the request could not run.

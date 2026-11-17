@@ -1,6 +1,6 @@
 ---
 name: tiktok-data
-description: Answer questions with live TikTok data from Scavio. Use when the user asks about TikTok videos, creators, hashtags, sounds, comments, trending searches and live status.
+description: Answer questions with live TikTok data from Scavio. Use when the user asks about TikTok: look up profiles by username or sec_user_id, list a user's videos, read full video detail, transcripts, comments and comment replies, search videos, users and sounds, pull hashtag stats and videos, sound detail and the Top 50 and Viral 50 charts, trending searches and videos, similar creators.
 ---
 
 # TikTok data with Scavio
@@ -42,7 +42,7 @@ Use Scavio's TikTok tools to answer with current public TikTok data. The user's 
 ## Write the answer
 
 - Answer from the returned data only. Do not invent posts, counts, quotes or dates.
-- Link the TikTok page for each item you mention when the data includes it.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - Report only public content. Do not compile profiles of private individuals beyond what the user asked about.
 - When nothing matches, say so and suggest a different query.

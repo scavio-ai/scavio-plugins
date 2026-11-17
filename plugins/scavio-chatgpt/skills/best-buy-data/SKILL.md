@@ -1,6 +1,6 @@
 ---
 name: best-buy-data
-description: Answer questions with live Best Buy data from Scavio. Use when the user asks about Best Buy product search, categories, deals, product details, reviews, prices, stores and pickup availability.
+description: Answer questions with live Best Buy data from Scavio. Use when the user asks about Best Buy: search bestbuy.com or browse any category or deals page, 18 products per page, with price, regular price, savings, deal badge, condition, rating and seller type, filtered by brand, on sale, clearance, open box or a price range, read one product by SKU with UPC, model.
 ---
 
 # Best Buy data with Scavio
@@ -30,8 +30,8 @@ Use Scavio's Best Buy tools to answer with current public Best Buy data. The use
 
 ## Write the answer
 
-- Answer from the returned data only. Do not invent products, prices, ratings or stock.
-- Link the Best Buy page for each item you mention when the data includes it.
+- Answer from the returned data only. Do not invent products, prices, ratings, stock or store details.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - When nothing matches, say so and suggest a different query.
 - If a tool returns an error, tell the user what failed in plain language. If the account has no credits left, say that the request could not run.

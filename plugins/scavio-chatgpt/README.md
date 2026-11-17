@@ -6,13 +6,13 @@ The Scavio plugin for the ChatGPT and Codex plugin directory. It connects to Sca
 | --- | --- |
 | `plugin.json` | Agent Plugins manifest with the OpenAI listing, review cases and publication settings under `extensions.com.openai` |
 | `mcp.json` | The remote MCP server (streamable HTTP). Authentication is OAuth, discovered from the server |
-| `skills/web-research/` | Google, company contacts and web pages: choosing a tool, ordering calls and citing sources |
-| `skills/<platform>-data/` | One skill per platform (TikTok, Instagram, YouTube, Reddit, X, LinkedIn, Amazon, Walmart, Target, Home Depot, eBay, Best Buy, Zillow, Redfin, Realtor.com), generated from the live tool list by `scripts/gen-chatgpt-skills.mjs` |
+| `skills/web-research/` | Web pages, site crawls and company contacts (hand-written) |
+| `skills/<name>/` | One skill per Google product and per platform: Google Search, News, Shopping, Maps, Flights, Hotels, Trends, Play, Ads Transparency; 40 US retailers; TikTok, YouTube, Instagram; Zillow, Redfin, Realtor.com. Generated from the live tool list by `scripts/gen-chatgpt-skills.mjs` |
 | `assets/` | Listing logo and composer icon |
 
 ## Tools
 
-Google search, news, shopping and Maps (search, place details, reviews); social media (TikTok, Instagram, YouTube, Reddit, X, LinkedIn); retailers (Amazon, Walmart, Target, Home Depot, eBay, Best Buy); real estate (Zillow, Redfin, Realtor.com); published company contact details from a website or Maps listing; and reading public web pages, site maps, crawls and batches of URLs. Every tool reads public data; crawl and batch start a job on your account and can be cancelled.
+Every Google product Scavio covers (Search, AI Mode, News, Shopping, Maps, Flights, Hotels, Trends, Google Play, Ads Transparency); 40 US retailers (Amazon, Walmart, Target, Costco, Home Depot, Best Buy and more); TikTok, YouTube and Instagram; Zillow, Redfin and Realtor.com; published company contact details from a website or Maps listing; and reading public web pages, site maps, crawls and batches of URLs. Every tool reads public data; crawl and batch start a job on your account and can be cancelled.
 
 ## Connect
 

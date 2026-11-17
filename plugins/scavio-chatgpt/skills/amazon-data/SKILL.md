@@ -1,6 +1,6 @@
 ---
 name: amazon-data
-description: Answer questions with live Amazon data from Scavio. Use when the user asks about Amazon product search, product details by ASIN and every seller's offer.
+description: Answer questions with live Amazon data from Scavio. Use when the user asks about Amazon: keyword search, full product detail by ASIN, and every seller offer on an ASIN with the buy-box winner.
 ---
 
 # Amazon data with Scavio
@@ -25,8 +25,8 @@ Use Scavio's Amazon tools to answer with current public Amazon data. The user's 
 
 ## Write the answer
 
-- Answer from the returned data only. Do not invent products, prices, ratings or stock.
-- Link the Amazon page for each item you mention when the data includes it.
+- Answer from the returned data only. Do not invent products, prices, ratings, stock or store details.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - When nothing matches, say so and suggest a different query.
 - If a tool returns an error, tell the user what failed in plain language. If the account has no credits left, say that the request could not run.

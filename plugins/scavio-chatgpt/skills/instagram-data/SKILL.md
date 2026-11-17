@@ -1,6 +1,6 @@
 ---
 name: instagram-data
-description: Answer questions with live Instagram data from Scavio. Use when the user asks about Instagram profiles, posts, Reels, comments, hashtags, audio and places.
+description: Answer questions with live Instagram data from Scavio. Use when the user asks about Instagram: profiles with follower counts and bio, timeline posts, reels, tagged posts, stories and highlights, single-post detail, comments, replies and likers, follower, following and similar-account lists, and search across users, hashtags, Reels, music and locations.
 ---
 
 # Instagram data with Scavio
@@ -37,7 +37,7 @@ Use Scavio's Instagram tools to answer with current public Instagram data. The u
 ## Write the answer
 
 - Answer from the returned data only. Do not invent posts, counts, quotes or dates.
-- Link the Instagram page for each item you mention when the data includes it.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - Report only public content. Do not compile profiles of private individuals beyond what the user asked about.
 - When nothing matches, say so and suggest a different query.

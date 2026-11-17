@@ -1,6 +1,6 @@
 ---
 name: redfin-data
-description: Answer questions with live Redfin data from Scavio. Use when the user asks about Redfin listings, property details with estimates, history and schools, and housing market stats.
+description: Answer questions with live Redfin data from Scavio. Use when the user asks about Redfin: Redfin listing search for sale, sold or for rent with filters for price, beds, baths, square footage and property type.
 ---
 
 # Redfin data with Scavio
@@ -25,7 +25,7 @@ Use Scavio's Redfin tools to answer with current public Redfin data. The user's 
 ## Write the answer
 
 - Answer from the returned data only. Do not invent listings, prices, estimates or dates.
-- Link the Redfin page for each item you mention when the data includes it.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - When nothing matches, say so and suggest a different query.
 - If a tool returns an error, tell the user what failed in plain language. If the account has no credits left, say that the request could not run.

@@ -1,6 +1,6 @@
 ---
 name: zillow-data
-description: Answer questions with live Zillow data from Scavio. Use when the user asks about Zillow homes for sale, for rent and sold, listing details and agent reviews.
+description: Answer questions with live Zillow data from Scavio. Use when the user asks about Zillow: search listings for sale, for rent or sold, pull one property in full, and read an agent's profile and reviews.
 ---
 
 # Zillow data with Scavio
@@ -25,7 +25,7 @@ Use Scavio's Zillow tools to answer with current public Zillow data. The user's 
 ## Write the answer
 
 - Answer from the returned data only. Do not invent listings, prices, estimates or dates.
-- Link the Zillow page for each item you mention when the data includes it.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - When nothing matches, say so and suggest a different query.
 - If a tool returns an error, tell the user what failed in plain language. If the account has no credits left, say that the request could not run.

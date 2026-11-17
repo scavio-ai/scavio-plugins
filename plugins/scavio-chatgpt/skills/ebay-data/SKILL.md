@@ -1,6 +1,6 @@
 ---
 name: ebay-data
-description: Answer questions with live eBay data from Scavio. Use when the user asks about eBay live and sold listings, listing details and seller profiles.
+description: Answer questions with live eBay data from Scavio. Use when the user asks about eBay: search live listings with price, condition, bids, units sold, watchers, shipping and seller feedback, read one listing in full with item specifics, shipping, returns and auction state, and pull a seller's feedback score, items sold and location.
 ---
 
 # eBay data with Scavio
@@ -24,8 +24,8 @@ Use Scavio's eBay tools to answer with current public eBay data. The user's expl
 
 ## Write the answer
 
-- Answer from the returned data only. Do not invent products, prices, ratings or stock.
-- Link the eBay page for each item you mention when the data includes it.
+- Answer from the returned data only. Do not invent products, prices, ratings, stock or store details.
+- Link the source page for each item you mention when the data includes it.
 - Prices, counts and availability change; say they are current as of the request.
 - When nothing matches, say so and suggest a different query.
 - If a tool returns an error, tell the user what failed in plain language. If the account has no credits left, say that the request could not run.
